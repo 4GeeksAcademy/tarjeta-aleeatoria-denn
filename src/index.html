@@ -17,26 +17,30 @@
 
 <body>
 
-  <body>
-
+  <div class="container-card">
     <div class="card">
       <div class="top-icon"></div>
       <div id="value"></div>
       <div class="bottom-icon"></div>
     </div>
 
-  
-      <button type="button" id="button" class="btn btn-light mx-5">change</button>
+    <button type="button" id="button" class="btn btn-light my-3"><strong><span>Change</span> Card</strong></button>
 
-    
+    <div class="controls">
+      <label for="widthCard">Ancho:</label>
+      <input id="widthCard" type="range" min="200" max="400" value="300" />
 
-   
-    
+      <label for="heightCard">Altura:</label>
+      <input id="heightCard" type="range" min="450" max="500" value="475" />
+    </div>
+  </div>
 
 
-  </body>
-  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-  <script type="module" src="/app.js"></script>
+
+
+</body>
+<!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+<script type="module" src="/app.js"></script>
 </body>
 
 </html>

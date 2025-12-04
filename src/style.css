@@ -1,13 +1,24 @@
 
 body{
   background-color: green;
+  /* display: flex;
+  justify-content: center; */
+  /* height: 100vh; */
+  margin-top: 20px; 
+}
+
+.container-card {
   display: flex;
+  flex-direction: column;  
   justify-content: center;
   align-items: center;
+  gap: 10px;
   height: 100vh;
-  margin: 0;
+    position: relative;
 
 }
+
+
 .card{
   width: 300px;
   height: 450px;
@@ -18,6 +29,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
 
 }
 .top-icon {
@@ -40,3 +53,25 @@ body{
   font-weight: bold;
 }
 
+
+
+#heightCard[type="range"] {
+  appearance: slider-vertical;
+
+}
+
+
+input[type="range"]{
+  accent-color: yellow;
+}
+
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+#button span{
+  color: rgb(247, 0, 0);
+}

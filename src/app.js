@@ -5,22 +5,22 @@ const icons = ["♦", "♥", "♠", "♣"];
 
 
 function changeCard() {
-  let i = Math.floor(Math.random() * numbers.length);
+  let randomNumber = Math.floor(Math.random() * numbers.length);
 
-  let y = Math.floor(Math.random() * icons.length);
+  let randomIcon = Math.floor(Math.random() * icons.length);
   
   let valueElement = document.querySelector("#value")
-  valueElement.textContent = numbers[i]
+  valueElement.textContent = numbers[randomNumber]
 
 
   let topIconElement = document.querySelector(".top-icon")
-  topIconElement.textContent = icons[y]
+  topIconElement.textContent = icons[randomIcon]
 
   let bottonIconElement = document.querySelector(".bottom-icon")
-  bottonIconElement.textContent = icons[y]
+  bottonIconElement.textContent = icons[randomIcon]
 
   let card = document.querySelector(".card")
-  if (icons[y] === "♥" || icons[y] === "♦") {
+  if (icons[randomIcon] === "♥" || icons[randomIcon] === "♦") {
     card.style.color = "red";
   }
   else {
@@ -37,4 +37,21 @@ button.addEventListener("click", changeCard)
 
 
 
-console.log(icons[y])
+//cambiala carta cada 5 segundos
+setInterval(changeCard, 5000); {
+  console.log("han pasado 5 segundos");
+};
+
+const widthCard = document.querySelector("#widthCard")
+const heightCard = document.querySelector("#heightCard")
+const card = document.querySelector(".card")
+
+widthCard.addEventListener('input',(e) =>{
+  const newWitdh = e.target.value; 
+  card.style.width = `${newWitdh}px`;
+})
+
+heightCard.addEventListener('input', (e) =>{
+  const newHeight = e.target.value;
+  card.style.height= `${newHeight}px`;
+})
